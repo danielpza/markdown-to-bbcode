@@ -1,7 +1,7 @@
 {
   "name": "markdown-to-steam-formatting",
   "version": "0.1.0",
-  "description": "Converst from markdown to steam text formatting",
+  "description": "Convert from markdown to steam text formatting",
   "main": "index.js",
   "type": "module",
   "scripts": {
