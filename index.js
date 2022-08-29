@@ -28,6 +28,10 @@ ${children}
     }
     case "paragraph":
       return node.children.map(transform).join("");
+    case "link": {
+      const children = node.children.map(transform).join("");
+      return `[url=${node.url}]${children}[/url]`;
+    }
     default:
       throw new Error(`Type ${node.type} not supported`);
   }

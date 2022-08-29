@@ -32,3 +32,5 @@ test(
 [/list]\
 `
 );
+
+test("link", "[text](https://link)", "[url=https://link]text[/url]");
