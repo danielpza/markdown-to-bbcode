@@ -4,7 +4,10 @@
   "description": "Converst from markdown to steam text formatting",
   "main": "index.js",
   "type": "module",
-  "scripts": {},
+  "scripts": {
+    "lint": "tsc",
+    "test": "node --test"
+  },
   "keywords": [
     "steam",
     "markdown"
@@ -13,5 +16,9 @@
   "license": "MIT",
   "dependencies": {
     "mdast-util-from-markdown": "^1.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^18.7.13",
+    "typescript": "^4.8.2"
   }
 }
