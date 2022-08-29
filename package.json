@@ -1,0 +1,17 @@
+{
+  "name": "markdown-to-steam-formatting",
+  "version": "0.1.0",
+  "description": "Converst from markdown to steam text formatting",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {},
+  "keywords": [
+    "steam",
+    "markdown"
+  ],
+  "author": "danielpza",
+  "license": "MIT",
+  "dependencies": {
+    "mdast-util-from-markdown": "^1.2.0"
+  }
+}
