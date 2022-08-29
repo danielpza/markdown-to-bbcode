@@ -1,3 +1,8 @@
-# markdown-to-steam-formatting
+# markdown-to-bbcode
 
-Convert from markdown to steam text formatting
+Convert from markdown to bb code (steam text formatting)
+
+## References
+
+- https://steamcommunity.com/comment/WorkshopItem/formattinghelp
+- https://en.wikipedia.org/wiki/BBCode

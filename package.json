@@ -1,5 +1,5 @@
 {
-  "name": "markdown-to-steam-formatting",
+  "name": "markdown-to-bbcode",
   "version": "0.1.0",
   "description": "Convert from markdown to steam text formatting",
   "bin": "cli.js",
@@ -20,7 +20,7 @@
   ],
   "author": "danielpza",
   "license": "MIT",
-  "repository": "danielpza/markdown-to-steam-formatting",
+  "repository": "danielpza/markdown-to-bbcode",
   "dependencies": {
     "mdast-util-from-markdown": "^1.2.0"
   },
