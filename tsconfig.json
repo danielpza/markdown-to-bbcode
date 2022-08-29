@@ -15,6 +15,6 @@
 
     "allowSyntheticDefaultImports": true,
 
-    "skipLibCheck": true /* Skip type checking all .d.ts files. */
+    "skipLibCheck": true
   }
 }
