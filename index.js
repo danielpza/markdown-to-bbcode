@@ -2,6 +2,12 @@
 import { fromMarkdown } from "mdast-util-from-markdown";
 
 /**
+ * @param {string} name
+ * @param {string} children
+ */
+const tag = (name, children) => `\n[${name}]${children}[/${name}]`;
+
+/**
  * @param {import ("mdast-util-from-markdown/lib").Node} node
  * @return {string} */
 function transform(node) {
@@ -10,18 +16,14 @@ function transform(node) {
       return node.children.map(transform).join("\n");
     case "heading": {
       const children = node.children.map(transform).join("");
-      return `[h${node.depth}]${children}[/h${node.depth}]`;
+      return tag(`h${node.depth}`, children);
     }
     case "text":
       return node.value;
     case "list": {
       const children = node.children.map(transform).join("\n");
       // TODO support ordered/unordered list
-      return `\
-[list]
-${children}
-[/list]\
-`;
+      return tag(`list`, "\n" + children + "\n");
     }
     case "listItem": {
       const children = node.children.map(transform).join("");
@@ -34,7 +36,10 @@ ${children}
       return `[url=${node.url}]${children}[/url]`;
     }
     default:
-      console.error(`Type ${node.type} not supported`);
+      console.error(
+        // @ts-expect-error -- value can be undefined?
+        `Type ${node.type} not supported: \`${JSON.stringify(node.value)}\``,
+      );
       return "";
   }
 }
