@@ -9,7 +9,7 @@ function transform(node) {
     case "root":
       return node.children.map(transform).join("\n");
     case "heading": {
-      const children = node.children.map(transform);
+      const children = node.children.map(transform).join("");
       return `[h${node.depth}]${children}[/h${node.depth}]`;
     }
     case "text":
