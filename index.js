@@ -1,3 +1,4 @@
+// @ts-check
 import { fromMarkdown } from "mdast-util-from-markdown";
 
 /**
@@ -33,7 +34,8 @@ ${children}
       return `[url=${node.url}]${children}[/url]`;
     }
     default:
-      throw new Error(`Type ${node.type} not supported`);
+      console.error(`Type ${node.type} not supported`);
+      return "";
   }
 }
 
